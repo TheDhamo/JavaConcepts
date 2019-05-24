@@ -59,8 +59,8 @@ public class DataAndPrimitiveDataTypes {
 		// Difference between float and double primitive data type
 		float diffFloatValue = 5f / 3f;
 		double diffDoubleValue = 5d / 3d;
-		System.out.println("float variable gives: " + diffFloatValue);
-		System.out.println("double variable gives: " + diffDoubleValue);
+		System.out.println("The variable of type float gives: " + diffFloatValue);
+		System.out.println("The variable of type double gives: " + diffDoubleValue);
 
 		// Conversion of double to float with 3 significant digits after decimal
 		double doubleValueToConvert = 41.746380532;
