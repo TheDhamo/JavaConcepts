@@ -32,7 +32,7 @@ public class DataAndPrimitiveDataTypes {
 		System.out.println(myLongValue);
 
 		/*
-		 * float (takes 32 bits, need to put "f" at the end, 6 to 7 significant
+		 * float (takes 32 bits, need to add "f" at the end, 6 to 7 significant
 		 * decimal digits)
 		 */
 		float myFloatValue = 24.346436f;
