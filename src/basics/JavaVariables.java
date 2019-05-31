@@ -23,7 +23,7 @@ public class JavaVariables {
 		obj2.biometrics(false);
 	}
 
-	private void biometrics(boolean overThirty) {
+	public void biometrics(boolean overThirty) {
 		int age; /* Here, "age" and "overThirty" are local variables. */
 		age = overThirty ? 31 : 29;
 		System.out.println("Height of the person is: " + heightOfPerson + " cm.(static)");
