@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class JavaArrays {
 	/*
 	 * "Arrays" in Java is a type of data structure that can store elements of
-	 * similar data types (primitive or non- primitive). Arrays in java are
+	 * similar data types (primitive OR non- primitive). Arrays in java are
 	 * objects.
 	 */
 	public static void main(String[] args) {
