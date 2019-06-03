@@ -25,6 +25,12 @@ public class BankCustomer {
 		customerJim.withdrawFund(60000, "Jim");
 		System.out.println("Your current account balance is: " + customerJim.getAccountBalance());
 		System.out.println("***************************************************************");
+
+		NewBankA variableCustomer1 = new NewBankA();
+		NewBankA variableCustomer2 = new NewBankA("Jack");
+		NewBankA variableCustomer3 = new NewBankA("(123) 456 789", 123456);
+		System.out.println("***************************************************************");
+
 	}
 
 }
