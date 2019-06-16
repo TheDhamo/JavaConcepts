@@ -26,6 +26,6 @@ public class NativeMobileApplications extends MobileApplications {
 	public void appInstallation() {
 		System.out.println(
 				"Users need to install Native Mobile Applications from the app stores or can create on their own.");
-	};
+	}
 
 }
