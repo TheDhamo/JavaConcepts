@@ -2,7 +2,8 @@
 package reflections;
 
 import java.lang.reflect.Constructor;
-
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -29,6 +30,41 @@ public class Reflection_Main_2 {
 		System.out.println(bird3.getName());
 	}
 
-	/* To get and set Field values at runtime */
+	/* To access Field values and to Modify them at runtime */
+	@Test
+	public void accessAndModifyFieldValues() throws Exception {
+		System.out.println("**************************************************");
+		System.out.println("Access Field Values and modify them");
+		System.out.println("**************************************************");
+		Bird bird = new Bird();
+		Class<?> birdClass = bird.getClass();
+		Bird birdObj = (Bird) birdClass.newInstance();
+		Field field = birdClass.getDeclaredField("walks");
+		field.setAccessible(true);
+		System.out.println(field.getBoolean(bird));
+		System.out.println(bird.walks());
+		field.set(bird, true);
+		System.out.println(field.getBoolean(bird));
+		System.out.println(bird.walks());
+	}
+
+	/* To invoke Methods of a Class at runtime */
+	@Test
+	public void invokeMethods() throws Exception {
+		System.out.println("**************************************************");
+		System.out.println("Invoke Methods of a Class");
+		System.out.println("**************************************************");
+		Class<?> birdClass = Class.forName("reflections.Bird");
+		Bird bird = (Bird) birdClass.newInstance();
+		Method setWalksMethod = birdClass.getDeclaredMethod("setWalks", boolean.class);
+		Method walksMethod = birdClass.getDeclaredMethod("walks");
+		boolean walks = (boolean) walksMethod.invoke(bird);
+		System.out.println(walks);
+		System.out.println(bird.walks());
+		setWalksMethod.invoke(bird, true);
+		boolean walks2 = (boolean) walksMethod.invoke(bird);
+		System.out.println(walks2);
+		System.out.println(bird.walks());
+	}
 
 }

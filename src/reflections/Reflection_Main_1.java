@@ -34,7 +34,7 @@ public class Reflection_Main_1 {
 
 	/* Extracting information about the fields of the Person class at runtime */
 	@Test
-	public void extractFieldnfo() {
+	public void extractFieldnfo() throws Throwable {
 		System.out.println("**************************************************");
 		System.out.println("Extract Field Information");
 		System.out.println("**************************************************");
@@ -55,6 +55,9 @@ public class Reflection_Main_1 {
 		for (Field declaredFieldName : declaredFieldNames) {
 			System.out.println("Field: " + declaredFieldName.getName() + " with Type: " + declaredFieldName.getType());
 		}
+		Field privateField = person.getClass().getDeclaredField("name");
+		System.out.println("Private field in the Person class: " + privateField.getName());
+
 	}
 
 	/*
