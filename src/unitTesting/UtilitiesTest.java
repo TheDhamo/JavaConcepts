@@ -1,31 +1,51 @@
 package eighteenthSection;
 
 import static org.junit.Assert.assertEquals;
-
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+import org.junit.Before;
+import static org.junit.Assert.assertArrayEquals;
 import org.junit.Test;
 
 public class UtilitiesTest {
+	private Utilities utils;
 
-	@Test
-	public void everyWithChar() throws Throwable {
-
+	@Before
+	public void setUp() {
+		utils = new Utilities();
 	}
 
 	@Test
-	public void removePairs() throws Throwable {
-		Utilities util = new Utilities();
-		assertEquals("ABCDEF", util.removePairs("AABCDDEFF"));
-		assertEquals("ABCABDEF", util.removePairs("ABCCABDEEF"));
+	public void everyNthChar() throws Exception {
+		char[] output = utils.everyNthChar(new char[] { 'h', 'e', 'l', 'l', 'o' }, 2);
+		assertArrayEquals(new char[] { 'e', 'l' }, output);
+		char[] output2 = utils.everyNthChar(new char[] { 'h', 'e', 'l', 'l', 'o' }, 8);
+		assertArrayEquals(new char[] { 'h', 'e', 'l', 'l', 'o' }, output2);
 	}
 
 	@Test
-	public void converter() throws Throwable {
-
+	public void removePairs() throws Exception {
+		assertEquals("ABCDEF", utils.removePairs("AABCDDEFF"));
+		assertEquals("ABCABDEF", utils.removePairs("ABCCABDEEF"));
+		assertNull("Did not get null returned when argument passed was null", utils.removePairs(null));
+		assertEquals("A", utils.removePairs("A"));
+		assertEquals("", utils.removePairs(""));
 	}
 
 	@Test
-	public void nullIfOddLength() throws Throwable {
+	public void converter() throws Exception {
+		assertEquals(300, utils.converter(10, 5));
+	}
 
+	@Test(expected = ArithmeticException.class)
+	public void converter_arithmeticException() throws Exception {
+		utils.converter(10, 0);
+	}
+
+	@Test
+	public void nullIfOddLength() throws Exception {
+		assertNull(utils.nullIfOddLength("odd"));
+		assertNotNull(utils.nullIfOddLength("even"));
 	}
 
 }
