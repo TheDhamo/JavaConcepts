@@ -38,6 +38,7 @@ local.properties
 
 ### Maven ###
 target/
+libs/
 
 # BlueJ files
 *.ctxt

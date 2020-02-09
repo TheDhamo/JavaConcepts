@@ -13,7 +13,7 @@
  * the object references.*/
 /*assertThat() (in Junit4.4 and above) - This method compares the actual value against a matcher (not the matcher in the JDK, but a Junit matcher class).
  * This is more powerful than the other assert methods, since we compare the actual value against a range of values.*/
-package eighteenthSection;
+package unitTesting;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

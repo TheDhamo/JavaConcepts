@@ -1,4 +1,4 @@
-package eighteenthSection;
+package unitTesting;
 
 import static org.junit.Assert.assertEquals;
 
