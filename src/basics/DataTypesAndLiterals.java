@@ -1,13 +1,13 @@
 /* Primitive Data Types*/
 package basics;
 
-public class DataAndPrimitiveDataTypes {
+public class DataTypesAndLiterals {
 
 	public static void main(String[] args) {
 		/*
 		 * The primitive data types in java can be classified into Integers
 		 * (byte, short, int, long) Floating-Point Numbers (float, double),
-		 * Characters(char)and Boolean (boolean)
+		 * Characters (char) and Boolean (boolean)
 		 */
 
 		// Integers - whole valued signed numbers (positive and negative)
@@ -25,7 +25,7 @@ public class DataAndPrimitiveDataTypes {
 		 * int (takes 32-bits and value ranges from -2,147,483,648 to 2,147,483,
 		 * 647)
 		 */
-		// The data types "byte" and "short" are promoted to "int" in an
+		// The data types "byte", "short" and "char" are promoted to "int" in an
 		// expression
 		int myIntValue1 = 37728892;
 		int myIntValue2 = 123_456_789; // Integer literal using underscores
@@ -75,6 +75,16 @@ public class DataAndPrimitiveDataTypes {
 		// 's' is raised to "int" type and added to 1, the addition is then
 		// casted to "char"
 		System.out.println("char: " + myChar3);
+		System.out.println("*********************************************");
+
+		// Escape Sequences for Character Literals
+		System.out.println(" \"Java\""); // Double Quote
+		System.out.println(" \'is\'"); // Single Quote
+		System.out.println(" a\\"); // Backslash
+		System.out.println(" statically\r"); // Carriage Return
+		System.out.println(" typed\n"); // New Line or Line Feed
+		System.out.println(" programming\tlanguage\b\f"); // Tab, Backspace and
+															// Form Feed
 		System.out.println("*********************************************");
 
 		// Boolean - to represent logical values "true" and "false"
