@@ -1,13 +1,13 @@
-/*Data Type Casting*/
+/*Data Type Conversion and Type Casting*/
 package basics;
 
-public class DataTypeCasting {
+public class DataTypeConversionAndCasting {
 
 	public static void main(String[] args) {
 		/*
-		 * Widening Type Casting or Automatic Type Conversion or Implicit Type
-		 * Casting. This casting does not require to declare casting explicitly.
-		 * byte -> short -> int -> long -> float -> double
+		 * Widening Type Casting (Automatic Type Conversion/Implicit Type
+		 * Casting). This conversion does not require to declare casting
+		 * explicitly. byte -> short -> int -> long -> float -> double
 		 */
 		byte myByteValue1 = 114;
 		short myShortValue1 = myByteValue1;
@@ -25,7 +25,7 @@ public class DataTypeCasting {
 		System.out.println("***************************************************************");
 
 		/*
-		 * Narrowing Type Casting or Explicit Type Casting. In this type of
+		 * Narrowing Type Casting (Explicit Type Casting). In this type of
 		 * casting it mandatorily requires you to declare casting explicitly.
 		 * byte <- short <- int <- long <- float <- double
 		 */
@@ -45,6 +45,14 @@ public class DataTypeCasting {
 		System.out.println("The variable of type byte has value of: " + myByteValue2);
 		System.out.println("***************************************************************");
 
+		// Converting from "float/double" to "int" (Truncation)
+		double myDoubleValue3 = 453.24555552;
+		float myFloatValue3 = 532.43F;
+		int myFirstIntValue3 = (int) myDoubleValue3;
+		int mySecondIntValue3 = (int) myFloatValue3;
+		System.out.println("After truncation of double, the int value is: " + myFirstIntValue3);
+		System.out.println("After truncation of float, the int value is: " + mySecondIntValue3);
+		System.out.println("***************************************************************");
 	}
 
 }

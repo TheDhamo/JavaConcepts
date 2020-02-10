@@ -1,4 +1,4 @@
-/* Primitive Data Types*/
+/* Primitive Data Types or Simple Data Types*/
 package basics;
 
 public class DataTypesAndLiterals {
@@ -7,26 +7,30 @@ public class DataTypesAndLiterals {
 		/*
 		 * The primitive data types in java can be classified into Integers
 		 * (byte, short, int, long) Floating-Point Numbers (float, double),
-		 * Characters (char) and Boolean (boolean)
+		 * Characters (char) and Boolean (boolean). Though Java is
+		 * object-oriented, primitive data types are not object-oriented
 		 */
 
-		// Integers - whole valued signed numbers (positive and negative)
-		/* byte (takes 8-bits and value ranges from -128 to 127) */
-		// useful when working with a stream of data from a network or file
+		// *** Integers - whole valued signed numbers (positive & negative)***//
+
+		// byte (takes 8-bits and value ranges from -128 to 127)
+		// useful when working with a stream of data from a network or file/ raw
+		// binary data
 		byte myByteValue = 127;
 		System.out.println("byte: " + myByteValue);
 		System.out.println("*********************************************");
 
-		/* short (takes 16-bits and value ranges from -32768 to 32767) */
+		// short (takes 16-bits and value ranges from -32768 to 32767)
 		short myShortValue = 32767;
 		System.out.println("short: " + myShortValue);
 		System.out.println("*********************************************");
+
 		/*
 		 * int (takes 32-bits and value ranges from -2,147,483,648 to 2,147,483,
 		 * 647)
 		 */
 		// The data types "byte", "short" and "char" are promoted to "int" in an
-		// expression
+		// expression and arithmetic operations can be performed on that
 		int myIntValue1 = 37728892;
 		int myIntValue2 = 123_456_789; // Integer literal using underscores
 		int myIntValue3 = 123__456__789; // Integer literal using underscores
@@ -41,40 +45,59 @@ public class DataTypesAndLiterals {
 		 * long (takes 64-bits and value ranges from -9,223,372,036,854,775,808
 		 * to 9,223,372,036,854,775,807)
 		 */
+		// need to append "L" at the end of the literal to specify as long
 		long myLongValue = 332238487574374L;
 		System.out.println("long: " + myLongValue);
 		System.out.println("*********************************************");
 
-		// Floating-Point Numbers - Real Numbers with Fractional Precisions.
+		// *** Floating-Point Numbers - Real Numbers with Fractional
+		// Precisions***//
+
 		// Java implements the standarad IEEE-754 set of floating point types
 		// and operators
 		/*
-		 * float (specifies a single-precision value, takes 32-bits, need to add
-		 * "f" at the end, 6 to 7 significant decimal digits)
+		 * float (specifies a single-precision value, takes 32-bits, need to
+		 * append "f" at the end to specify as float, 6 to 7 significant decimal
+		 * digits, typically used when we need a fractional component but don't
+		 * require a larger degree of precision)
 		 */
-		float myFloatValue = 24.346436F;
-		System.out.println("float: " + myFloatValue);
+		float myFloatValue1 = 24.346436F;
+		System.out.println("float: " + myFloatValue1);
 		System.out.println("*********************************************");
 
 		/*
 		 * double (specifies a double-precision value, takes 64-bits, putting
-		 * "d" at the end is optional, 15 significant decimal digits)
+		 * "d" at the end is optional, 15 significant decimal digits, faster
+		 * than single precision)
 		 */
-		double myDoubleValue = 422.5552643337774;
-		System.out.println("double: " + myDoubleValue);
+		double myDoubleValue1 = 422.5552643337774;
+		// double literal using underscores
+		double myDoubleValue2 = 422.55_52_6433_37774;
+		double myDoubleValue3 = 422.555__2643337__774;
+		double myDoubleValue4 = 42__2.55526_4333_7774;
+		System.out.println("double: " + myDoubleValue1);
+		System.out.println("double: " + myDoubleValue2);
+		System.out.println("double: " + myDoubleValue3);
+		System.out.println("double: " + myDoubleValue4);
 		System.out.println("*********************************************");
 
-		// Characters - Java uses Unicode character-set to represent characters
-		// (including the ASCII)
-		/* char (takes 16-bits, 0 to 65536(unsigned)) */
+		// Characters - Symbols in a character set like letters and numbers
+		// Java uses Unicode character-set to represent characters
+		// Unicode defines a fully international character set that can
+		// represent all of the characters found in all human languages
+		// (including the ASCII - ranging from 0 to 127)
+		/* char (takes 16-bits, 0 to 65536(unsigned - no negative chars)) */
 		char myChar1 = 's';
 		char myChar2 = '\u00A9'; // hexadecimal notation of Unicode
 		char myChar3 = '\141'; // octal notation of Unicode
-		System.out.println("My sample char example contains: " + myChar2 + myChar1);
-		System.out.println((char) ('s' + 1));
+		char myChar4 = 88; // Unicode or ASCII value for X
+		System.out.println("char: " + myChar1 + myChar2);
+		System.out.println("char: " + (char) ('s' + 1));
 		// 's' is raised to "int" type and added to 1, the addition is then
-		// casted to "char"
+		// casted to "char" which prints out "t" (can be used as an integer type
+		// to perform integer operations)
 		System.out.println("char: " + myChar3);
+		System.out.println("char: " + myChar4);
 		System.out.println("*********************************************");
 
 		// Escape Sequences for Character Literals
