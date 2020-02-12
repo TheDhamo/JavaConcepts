@@ -17,11 +17,13 @@ public class JavaArrays {
 		initializeArray4();
 		/*
 		 * Multidimensional arrays are "arrays of arrays" with each element of
-		 * the array holding the reference of other array.
+		 * the multidimensional array holding the reference of another array.
 		 */
-		array2DExample();
+		array2DExample1();
+		array2DExample2();
 		array3DExample();
 		pyramid();
+		dynamicDimensionAllocation();
 	}
 
 	private static void initializeArray1() {
@@ -40,6 +42,8 @@ public class JavaArrays {
 	}
 
 	private static void initializeArray2() {
+		// An array initializer is a list of comma-separated expressions
+		// surrounded by curly braces
 		String[] myFriends = { "Sam", "Harry", "Tom", "Richard", "Peter", "Mike" };
 		System.out.println(Arrays.toString(myFriends));
 		System.out.println(myFriends.getClass());
@@ -64,14 +68,33 @@ public class JavaArrays {
 		System.out.println("***************************************************************");
 	}
 
-	private static void array2DExample() {
+	// MultiDimensional Arrays
+	private static void array2DExample1() {
 		/*
-		 * Data is stored in row and column based index (in matrix form).
+		 * Data is stored in row and column-based index (in matrix form).
 		 */
 		int[][] my2DArray = { { 12, 4, 6 }, { 66, 33, 2 }, { 6, 1, 5 } };
 		for (int row = 0; row < my2DArray.length; row++) {
 			for (int column = 0; column < my2DArray.length; column++) {
 				System.out.print(my2DArray[row][column] + "\t");
+			}
+			System.out.println("");
+		}
+		System.out.println("***************************************************************");
+	}
+
+	private static void array2DExample2() {
+		int[][] my2DArray = new int[4][5];
+		int i, j, k = 0;
+		for (i = 0; i < 4; i++) {
+			for (j = 0; j < 5; j++) {
+				my2DArray[i][j] = k;
+				k++;
+			}
+		}
+		for (i = 0; i < 4; i++) {
+			for (j = 0; j < 5; j++) {
+				System.out.print(my2DArray[i][j] + " ");
 			}
 			System.out.println("");
 		}
@@ -123,6 +146,30 @@ public class JavaArrays {
 				System.out.print("* ");
 			}
 			System.out.println();
+		}
+		System.out.println("***************************************************************");
+	}
+
+	// array capacity allocated dynamically for the second dimension in a 2D
+	// array
+	private static void dynamicDimensionAllocation() {
+		int[][] myDynamicArray = new int[4][];
+		myDynamicArray[0] = new int[1];
+		myDynamicArray[1] = new int[2];
+		myDynamicArray[2] = new int[3];
+		myDynamicArray[3] = new int[4];
+		int k = 0;
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < i + 1; j++) {
+				myDynamicArray[i][j] = k;
+				k++;
+			}
+		}
+		for (int i = 0; i < 4; i++) {
+			for (int j = 0; j < i + 1; j++) {
+				System.out.print(myDynamicArray[i][j] + " ");
+			}
+			System.out.println("");
 		}
 		System.out.println("***************************************************************");
 	}
