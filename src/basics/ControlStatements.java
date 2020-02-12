@@ -1,11 +1,23 @@
-/*Conditional Statements*/
+/*Control Statements*/
 package basics;
 
 import java.util.Scanner;
 
-public class ConditionalStatements {
+public class ControlStatements {
 
 	public static void main(String[] args) {
+
+		// Selection Statements
+		ifElseIf();
+		switchStatement();
+
+		// Jump Statement (break, continue, return)
+		breakStatement();
+		breakLabelStatement();
+	}
+
+	// If, else-if and nested if
+	private static void ifElseIf() {
 		/*
 		 * if statement - checks for condition. If condition returns boolean
 		 * true it executes the code within. For single statement within the if
@@ -48,7 +60,10 @@ public class ConditionalStatements {
 			System.out.println("Need to get more motivation.");
 		}
 		System.out.println("***************************************************************");
+	}
 
+	// switch
+	private static void switchStatement() {
 		/*
 		 * switch-case statement - works with some primitive data types (byte,
 		 * short, int, char), enumerations/enums, String data type and Wrapper
@@ -57,6 +72,8 @@ public class ConditionalStatements {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the month name:");
 		String month = scanner.nextLine();
+		// The expression within the switch must resolve to byte, short, int,
+		// char, enum and String
 		switch (month.toLowerCase()) {
 		case "january":
 			System.out.println("You are in January.");
@@ -96,10 +113,34 @@ public class ConditionalStatements {
 			break;
 		default:
 			System.out.println("You have not entered the correct month name.");
-			break;
+			break; // "break" in default is optional
 		}
 		System.out.println("***************************************************************");
+	}
 
+	// break
+	private static void breakStatement() {
+		for (int i = 0; i < 100; i++) {
+			if (i == 5) {
+				break;
+			}
+			System.out.println("i: " + i);
+		}
+		System.out.println("***************************************************************");
+	}
+
+	// break label
+	private static void breakLabelStatement() {
+		int k = 0;
+		outer: for (int i = 0; i < 4; i++) {
+			inner: for (int j = 0; j < 5; j++) {
+				System.out.println(k++);
+				if (k == 5) {
+					break outer;
+				}
+			}
+		}
+		System.out.println("***************************************************************");
 	}
 
 }
