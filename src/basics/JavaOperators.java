@@ -14,11 +14,13 @@ public class JavaOperators {
 		relationalOrComparisonOperator();
 		logicalOperator();
 		ternaryOrConditionalOperator();
-		bitwiseOperator();
+		bitwiseOperator1();
+		bitwiseOperator2();
 		shiftOperator();
 		instanceOfOperator();
 	}
 
+	// instanceOf operator
 	private static void instanceOfOperator() {
 		/*
 		 * Type Checking - to check if an object is an instance of a class, a
@@ -29,6 +31,7 @@ public class JavaOperators {
 		System.out.println("***************************************************************");
 	}
 
+	// shift operator
 	private static void shiftOperator() {
 		int a = 0x0005;
 		int b = -10;
@@ -36,12 +39,15 @@ public class JavaOperators {
 		System.out.println("a<<2 = " + (a << 2));
 		/* Signed Right Shift (>>) */
 		System.out.println("a>>2 = " + (a >> 2));
-		/* Unsigned Right Shift (>>>) */
+		/* Shift Right Zero Fill (>>>) */
 		System.out.println("b>>>2 = " + (b >>> 2));
 		System.out.println("***************************************************************");
 	}
 
-	private static void bitwiseOperator() {
+	// bitwise operator 1 (Encoding used in 2's complement)
+	private static void bitwiseOperator1() {
+		// Java defines several bitwise operators that can be applied to the
+		// integer types (byte, short, int, long, char)
 		/* Bitwise AND (&) - returns bit by bit AND of input values */
 		int a = 0x0005;
 		int b = 0x0007;
@@ -58,6 +64,28 @@ public class JavaOperators {
 		System.out.println("***************************************************************");
 	}
 
+	// bitwise operator 2 (Encoding used in 2's complement)
+	private static void bitwiseOperator2() {
+		String[] binary = { "0000", "0001", "0010", "0011", "0100", "0101", "0110", "0111", "1000", "1001", "1010",
+				"1011", "1100", "1101", "1110", "1111" };
+		int a = 3;
+		int b = 6;
+		int c = a | b;
+		int d = a & b;
+		int e = a ^ b;
+		int f = (~a & b) | (a & ~b);
+		int g = ~a & 0x0f;
+		System.out.println("a = " + binary[a]);
+		System.out.println("b = " + binary[b]);
+		System.out.println("a|b = " + binary[c]);
+		System.out.println("a&b = " + binary[d]);
+		System.out.println("a^b = " + binary[e]);
+		System.out.println("(~a & b) | (a & ~b) = " + binary[f]);
+		System.out.println("~a = " + binary[g]);
+		System.out.println("***************************************************************");
+	}
+
+	// ternary or conditional operator
 	private static void ternaryOrConditionalOperator() {
 		/*
 		 * It is a short-hand version of if-else statement and consists of 3
@@ -70,6 +98,7 @@ public class JavaOperators {
 		System.out.println("***************************************************************");
 	}
 
+	// logical operator
 	private static void logicalOperator() {
 		boolean isInteger = true;
 		boolean isPositive = false;
@@ -80,6 +109,7 @@ public class JavaOperators {
 		System.out.println("***************************************************************");
 	}
 
+	// relational or comparison operator
 	private static void relationalOrComparisonOperator() {
 		int myIntValue1 = 20;
 		int myIntValue2 = 14;
@@ -98,6 +128,7 @@ public class JavaOperators {
 		System.out.println("***************************************************************");
 	}
 
+	// unary operator
 	private static void unaryOperator() {
 		int myIntValue1 = 76;
 		int myIntValue2 = -34;
@@ -118,6 +149,7 @@ public class JavaOperators {
 		System.out.println("***************************************************************");
 	}
 
+	// arithmetic operator
 	private static void arithmeticOperator() {
 		double myDoubleValue1 = 45.4636;
 		double myDoubleValue2 = 5.212;
@@ -135,6 +167,7 @@ public class JavaOperators {
 
 	}
 
+	// assignment operator
 	private static void assignmentOperator() {
 		/* Assignment Operator and Compound Statement */
 		int myVariable = 54;
