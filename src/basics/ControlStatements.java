@@ -14,6 +14,8 @@ public class ControlStatements {
 		// Jump Statement (break, continue, return)
 		breakStatement();
 		breakLabelStatement();
+		continueStatement();
+		returnStatement();
 	}
 
 	// If, else-if and nested if
@@ -141,6 +143,32 @@ public class ControlStatements {
 			}
 		}
 		System.out.println("***************************************************************");
+	}
+
+	// continue statement
+	private static void continueStatement() {
+		int k = 0;
+		outer: for (int i = 0; i < 5; i++) {
+			inner: for (int j = 0; j < 5; j++) {
+				if (j > 3) {
+					continue outer;
+				}
+				System.out.print((i * j) + " ");
+				k++;
+			}
+			System.out.println("");
+		}
+		System.out.println("\n***************************************************************");
+	}
+
+	// return statement
+	private static void returnStatement() {
+		boolean check = true;
+		System.out.println("Before the return");
+		if (check) {
+			return; // return to the caller (to the run-time system JRE)
+		}
+		System.out.println("After the return"); // This won't execute
 	}
 
 }
