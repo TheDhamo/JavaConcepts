@@ -1,7 +1,7 @@
 /*Threads, Multithreading and Concurrency*/
 package multithreadingAndConcurrency;
 
-public class SampleThread {
+public class ThreadInitiationWays {
 
 	public static void main(String[] args) {
 		System.out.println("This is the first output inside the main thread.");
