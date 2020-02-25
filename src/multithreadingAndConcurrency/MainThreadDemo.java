@@ -12,6 +12,10 @@ public class MainThreadDemo {
 		System.out.println("Before name change, the thread is:  " + mainThread);
 		mainThread.setName("My Main Thread");
 		mainThread.setPriority(1);
+		// MIN_PRIORITY, MAX_PRIORITY, NORM_PRIORITY are public static final int
+		// variables in the "Thread" class
+		// The priority range should be between MIN_PRIORITY=1 and MAX_PRIORITY=10
+		// to return to default priority, specify NORM_PRIORITY=5
 		System.out.println("After name change, the thread is:  " + mainThread);
 		System.out.println("After name change, the name of the thread is: " + mainThread.getName());
 		System.out.println("Priority of the thread is: " + mainThread.getPriority());
