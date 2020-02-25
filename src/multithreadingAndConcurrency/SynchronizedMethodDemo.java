@@ -1,7 +1,7 @@
 /*Race Condition -> where multiple threads are trying to access the same method, on the same object, at the same time */
 package multithreadingAndConcurrency;
 
-public class SynchronizationDemo {
+public class SynchronizedMethodDemo {
 
 	public static void main(String[] args) {
 		CallMe target = new CallMe();
