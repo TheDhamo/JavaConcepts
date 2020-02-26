@@ -28,6 +28,12 @@ public class MainThreadDemo {
 		} catch (InterruptedException e) {
 			System.out.println("The main thread is interrupted");
 		}
+
+		// Thread State
+		// A thread can have the following states - BLOCKED, NEW, RUNNABLE, TERMINATED,
+		// TIMED_WAITING, WAITING
+		Thread.State ts = Thread.currentThread().getState();
+		System.out.println("Thread State is: " + ts);
 	}
 
 }
