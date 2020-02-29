@@ -12,7 +12,7 @@ public class EnumerationBasic {
 	public static void main(String[] args) {
 		// create a variable of enum type
 		Apple ap;
-		// only values that can be assigned to "name" are those defined by the enum
+		// only values that can be assigned to "ap" are those defined by the enum
 		ap = Apple.Jonathan;
 
 		// output an enum value
@@ -45,6 +45,16 @@ public class EnumerationBasic {
 			System.out.println("Cortland is Red.");
 			break;
 		}
+		System.out.println("*************************************************");
+
+		// values() and valueOf() methods
+		Apple[] allApples = Apple.values();
+		for (Apple a : allApples) {
+			System.out.println(a);
+		}
+		System.out.println("*************************************************");
+		ap = Apple.valueOf("Winesap");
+		System.out.println("ap contains " + ap);
 		System.out.println("*************************************************");
 	}
 
