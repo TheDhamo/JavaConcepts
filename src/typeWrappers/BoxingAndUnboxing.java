@@ -2,7 +2,7 @@
 /*Java Type Wrappers -> Double, Float, Long, Integer, Short, Byte, Character, Boolean*/
 package typeWrappers;
 
-public class TypeWrapperBasic {
+public class BoxingAndUnboxing {
 
 	public static void main(String[] args) {
 
