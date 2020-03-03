@@ -26,7 +26,7 @@ import java.lang.annotation.Target;
 @Inherited
 @Documented
 public @interface CustomAnnotation1 {
-	String value() default "Default Value";
+	String value() default "Default Value"; // An annotation element with a default value
 
 	String name();
 }

@@ -8,8 +8,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Inherited
+@Target(ElementType.METHOD)
 @Documented
-public @interface CustomAnnotation2 {
+@Inherited
+public @interface MarkerAnnotation {
 
 }

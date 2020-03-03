@@ -27,6 +27,7 @@ public class CustomAnnotationDemo {
 
 	@CustomAnnotation1(value = "123", name = "Modified Name")
 	@SuppressWarnings(value = { "rawtypes" })
+	@MarkerAnnotation
 	public List addVehicleNameToList(List names) {
 
 		@CustomAnnotation5
