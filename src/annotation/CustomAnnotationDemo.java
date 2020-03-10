@@ -2,9 +2,19 @@
 /*All annotation automatically extend the "Annotation" interface*/
 /*Annotations can be applied to classes, methods, fields, parameters and enum constants*/
 /*Java Build-in Annotations
+ * (From java.lang.annotation)
+ * Retention
+ * Documented
+ * Target
+ * Inherited
+ * Repeatable
+ * Native
+ * (From java.lang)
  * Override
  * Deprecated
- * SuppressWarnings*/
+ * SuppressWarnings
+ * FunctionalInterface
+ * SafeVarargs*/
 package annotation;
 
 import java.util.ArrayList;
