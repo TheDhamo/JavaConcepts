@@ -9,7 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileWriterAndReader {
-	private static String filePath = "./src/ioAndSerialization/SampleTextFile.txt";
+	private static String filePath = "./src/ioAndSerialization/SampleTextFile1.txt";
 
 	public static void main(String[] args) {
 		writeToFile(filePath);
