@@ -23,6 +23,15 @@ public class StringModification {
 		String str2 = "   Hello World Java         \t \r \n     ";
 		System.out.println(str2.trim());
 		System.out.println("**************************************************");
+
+		// join() -> Added in JDK8
+		String str3 = String.join(",", "I", "love", "Java", "Programming");
+		// here, "," is the delimiter
+		System.out.println(str3);
+		String str4 = String.join(":  ", "I", "love", "Java", "Programming");
+		// here, ": " is the delimiter
+		System.out.println(str4);
+		System.out.println("**************************************************");
 	}
 
 }

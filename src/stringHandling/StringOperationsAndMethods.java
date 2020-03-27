@@ -1,5 +1,7 @@
 package stringHandling;
 
+import java.util.Arrays;
+
 public class StringOperationsAndMethods {
 
 	public static void main(String[] args) {
@@ -32,6 +34,26 @@ public class StringOperationsAndMethods {
 		// is used in a concatenation expression or in a call to the println() method
 		System.out.println(myBox);
 		System.out.println(s);
+		System.out.println("*****************************************************");
+
+		// codePoint() (return the Unicode code point)
+		String str3 = "This is amazing.";
+		String str4 = new String(str3);
+		System.out.println(str3.codePointAt(2));
+		// contains()
+		System.out.println(str3.contains("s a"));
+		// contentEquals()
+		System.out.println(str4.contentEquals(str3));
+		// isEmpty()
+		System.out.println(str3.isEmpty());
+		// matches (matches with the regex passed as argument)
+		System.out.println(str3.matches("(.*)is (.*)"));
+		// replaceFirst()
+		System.out.println(str3.replaceFirst("is", "X"));
+		// replaceAll
+		System.out.println(str3.replaceAll(".", "X"));
+		// split()
+		System.out.println(Arrays.toString(str3.split(" ")));
 		System.out.println("*****************************************************");
 	}
 
