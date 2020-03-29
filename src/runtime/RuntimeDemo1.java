@@ -23,6 +23,18 @@ public class RuntimeDemo1 {
 			System.out.println("Error executing Notepad.");
 		}
 		System.out.println("Notepad returned: " + p.exitValue());
+		processBuilderDemo();
+	}
+
+	// Method to demonstrate ProcessBuilder which is another way of starting and
+	// managing processes (programs)
+	public static void processBuilderDemo() {
+		try {
+			ProcessBuilder proc = new ProcessBuilder("notepad.exe", "testfile");
+			proc.start();
+		} catch (Exception e) {
+			System.out.println("Error executing notepad.");
+		}
 	}
 
 }
