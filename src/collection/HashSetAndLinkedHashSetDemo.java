@@ -1,8 +1,9 @@
 package collection;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 
-public class HashSetDemo {
+public class HashSetAndLinkedHashSetDemo {
 	/*
 	 * The "HashSet" class extends the "AbstractSet" class and implements the "Set"
 	 * interface. It creates a collection that uses a hash table for storing
@@ -22,6 +23,7 @@ public class HashSetDemo {
 	 * process does not usually lend itself to the creation of sorted sets.
 	 */
 	public static void main(String[] args) {
+		// HashSet
 		HashSet<String> myHashSet = new HashSet<String>();
 		myHashSet.add("Cricket");
 		myHashSet.add("Football");
@@ -29,6 +31,17 @@ public class HashSetDemo {
 		myHashSet.add("Badmintor");
 		myHashSet.add("Tennis");
 		System.out.println("Contens of myHashSet: " + myHashSet);
+		System.out.println("*************************************************************");
+
+		// LinkedHashSet -> It maintains a linked list of the entries in the Set in the order in which they were inserted.
+		LinkedHashSet<String> myLinkedHashSet = new LinkedHashSet<String>();
+		myLinkedHashSet.add("Cricket");
+		myLinkedHashSet.add("Football");
+		myLinkedHashSet.add("Hockey");
+		myLinkedHashSet.add("Badmintor");
+		myLinkedHashSet.add("Tennis");
+		System.out.println("Contens of myLinkedHashSet: " + myLinkedHashSet);
+		System.out.println("*************************************************************");
 	}
 
 }
