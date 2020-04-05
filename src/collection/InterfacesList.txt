@@ -7,6 +7,12 @@ Set -> Extends Collection interface to handle sets, which must contain Unique El
 SortedSet -> Extends Set interface to handle sorted sets
 NavigableSet -> Extends SortedSet interface to handle retrieval of elements based on closest-match searches
 
+******************** Map Interfaces*********************
+Map
+Map.Entry
+NavigableMap
+SortedMap
+
 ******************** Other Interfaces*********************
 Comparator -> defines how two objects are compared
 RandomAccess -> to indicate that a list supports efficient random access to its elements

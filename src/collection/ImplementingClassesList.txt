@@ -14,6 +14,14 @@ LinkedHashSet -> Extends the "HashSet" class to allow insertion-order iterations
 PriorityQueue -> Extends the "AbstractQueue" class to support a priority-based queue
 TreeSet -> Extends the "AbstractSet" class and implements a set stored in a tree. 
 
+******************** Map Interface-implementing Classes *********************
+AbstractMap
+HashMap
+HashTable
+TreeMap
+ConcurrentHashMap
+LinkedHashMap
+
 ******************** Other Legacy Classes that support Collection *********************
 Vector
 Stack 
