@@ -15,12 +15,14 @@ PriorityQueue -> Extends the "AbstractQueue" class to support a priority-based q
 TreeSet -> Extends the "AbstractSet" class and implements a set stored in a tree. 
 
 ******************** Map Interface-implementing Classes *********************
-AbstractMap
-HashMap
-HashTable
-TreeMap
+AbstractMap-> Implements most of the Map interface
+EnumMap -> Extends the "AbstractMap" class for use with enum keys
+HashMap -> Extends the "AbstractMap" class to use a hash table
+TreeMap -> Extends the "AbstractMap" class to use a tree
+WeakHashMap -> Extends the "AbstractMap" class to use a hash table with weak keys
+LinkedHashMap -> Extends the "HashMap" class to allow insertion-order iterations 
+IdentityHashMap -> Extends the "AbstractMap" class and uses reference equality when comparing documents
 ConcurrentHashMap
-LinkedHashMap
 
 ******************** Other Legacy Classes that support Collection *********************
 Vector
