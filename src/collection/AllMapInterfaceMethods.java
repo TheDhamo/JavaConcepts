@@ -23,7 +23,7 @@ import java.util.Set;
  * Map.Entry -> describes an element (a key/value pair) in a map. This is an inner class of "Map"
  * NavigableMap -> extends the "SortedMap" interface to handle the retrieval of entries based on closes-match searches
  * SortedMap -> extends the "Map" interface so that the keys are maintained in ascending order.*/
-public class AllMapMethods {
+public class AllMapInterfaceMethods {
 
 	public static void main(String[] args) {
 		Map<Integer, String> myMap1 = new HashMap<Integer, String>();

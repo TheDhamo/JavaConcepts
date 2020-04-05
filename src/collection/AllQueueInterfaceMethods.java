@@ -1,34 +1,34 @@
 package collection;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.Spliterator;
 
-public class AllListMethods {
+public class AllQueueInterfaceMethods {
 
 	public static void main(String[] args) {
-		// 1st list
-		List<String> citiesInAustralia = new ArrayList<>();
+		Queue<String> citiesInIndia = new PriorityQueue<>();
+		Queue<String> citiesInAustralia = new LinkedList<>();
+		Queue<String> citiesInUS = new LinkedList<>();
+
 		citiesInAustralia.add("Sydney");
 		citiesInAustralia.add("Melbourne");
 		citiesInAustralia.add("Perth");
 		citiesInAustralia.add("Adelaide");
 		citiesInAustralia.add("Brisbane");
-		// 2nd list
-		List<String> citiesInIndia = new ArrayList<>();
+
 		citiesInIndia.add("Pune");
 		citiesInIndia.add("Mumbai");
-		// 3rd list
-		List<String> citiesInUS = new ArrayList<>();
+
 		citiesInUS.add("New York");
 		citiesInUS.add("New Jersey");
 
 		/* Methods inherited from the Collection interface */
 		// add
-		citiesInIndia.add(1, "Kolkata");
+		citiesInIndia.add("Kolkata");
 		System.out.println(citiesInIndia.toString());
 		// addAll
 		citiesInIndia.addAll(citiesInAustralia);
@@ -79,37 +79,23 @@ public class AllListMethods {
 
 		System.out.println("****************************************************");
 
-		/* Concrete methods of the List interface */
-		// add (int index,E object)
-		citiesInIndia.add(1, "Kolkata");
-		System.out.println(citiesInIndia.toString());
-		// addAll (int index, Collection<? extends E> c)
-		citiesInIndia.addAll(2, citiesInUS);
-		System.out.println(citiesInIndia.toString());
-		// get
-		System.out.println(citiesInIndia.get(0));
-		// indexOf
-		System.out.println(citiesInIndia.indexOf("Mumbai"));
-		// lastIndexOf
-		System.out.println(citiesInIndia.lastIndexOf("Mumbai"));
-		// listIterator
-		ListIterator<String> listItr1 = citiesInIndia.listIterator();
-		while (listItr1.hasNext()) {
-			System.out.println(listItr1.next());
-		}
-		ListIterator<String> listItr2 = citiesInIndia.listIterator(3);
-		while (listItr2.hasNext()) {
-			System.out.println(listItr2.next());
-		}
-		// remove
-		citiesInIndia.remove(2);
-		citiesInIndia.remove("New Jersey");
-		System.out.println(citiesInIndia.toString());
-		// set
-		citiesInIndia.set(1, "Bengaluru");
-		System.out.println(citiesInIndia.toString());
-		// subList
-		System.out.println(citiesInIndia.subList(1, 3));
+		/* Concrete methods of the Queue interface */
+		// element() -> returns element at the head of the queue
+		System.out.println(citiesInIndia.element());
+		// offer() -> attempts to add obj to the queue
+		System.out.println("Is object added?: " + citiesInIndia.offer("Mumbai"));
+		System.out.println("Is object added?: " + citiesInIndia.offer("Chennai"));
+		// peek() -> returns the element at the head of the queue without removing the
+		// element
+		System.out.println(citiesInIndia.peek());
+		System.out.println(citiesInIndia);
+		// poll() -> returns the element at the head of the queue and also removes the
+		// element
+		System.out.println(citiesInIndia.poll());
+		System.out.println(citiesInIndia);
+		// remove() -> removes the element at the head of the queue
+		System.out.println(citiesInIndia.remove());
+		System.out.println(citiesInIndia);
 		System.out.println("****************************************************");
 	}
 

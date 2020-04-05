@@ -9,7 +9,7 @@ import java.util.ListIterator;
 import java.util.Set;
 import java.util.Spliterator;
 
-public class AllSetMethods {
+public class AllSetInterfaceMethods {
 
 	public static void main(String[] args) {
 		// 1st set
