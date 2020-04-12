@@ -27,7 +27,8 @@ public class FormatterDemo {
 		System.out.println(formatter1);
 		// 2nd way of outputting
 		System.out.println(formatter1.toString());
-		// 3rd way of outputting
+		// 3rd way of outputting (The printf() method automatically uses Formatter to
+		// create a Formatted String)
 		System.out.printf("Formatting %s is easy %d %f", "with Java", 10, 98.6);
 		formatter1.close();
 		System.out.println("\n*************************************************************");
@@ -125,6 +126,69 @@ public class FormatterDemo {
 		formatter12.close();
 		System.out.println("******************************************");
 
+		/*
+		 * Format Flags -> The Formatter recognizes a set of format flags that lets you
+		 * control various aspects of a conversion. A format flag follows the "%" in a
+		 * format specification. They are "-", "#", "0", space, "+", "," and "("
+		 */
+		/*
+		 * %-10.2f left-justifies a floating-point number ith two decimal places in a
+		 * 10-character field
+		 */
+		Formatter formatter13 = new Formatter();
+		// Right-justified by default
+		formatter13.format("|%10.2f|", 123.123);
+		System.out.println(formatter13);
+		formatter13.close();
+		// Now left-justify
+		formatter13 = new Formatter();
+		// Right-justified by default
+		formatter13.format("|%-10.2f|", 123.123);
+		System.out.println(formatter13);
+		formatter13.close();
+		formatter13 = new Formatter();
+		formatter13.format("%+d", 200);
+		System.out.println(formatter13);
+		formatter13.close();
+		formatter13 = new Formatter();
+		formatter13.format("% d", 200);
+		System.out.println(formatter13);
+		formatter13.close();
+		formatter13 = new Formatter();
+		formatter13.format("%(d", -200);
+		System.out.println(formatter13);
+		formatter13 = new Formatter();
+		formatter13.format("%,.2f", 4356783497.34);
+		System.out.println(formatter13);
+		formatter13.close();
+		formatter13 = new Formatter();
+		formatter13.format("%X", 250);
+		System.out.println(formatter13);
+		formatter13.close();
+		System.out.println("******************************************");
+
+		/*
+		 * Argument Index -> using this we can explicitly control which argument a
+		 * format specifier matches
+		 */
+		Formatter formatter14 = new Formatter();
+		formatter14.format("%3$d %1$f %2$s", 23.2, "Hello", 30);
+		System.out.println(formatter14);
+		formatter14.close();
+		formatter14 = new Formatter();
+		formatter14.format("%d in hex is %1$x", 255);
+		System.out.println(formatter14);
+		formatter14.close();
+		formatter14 = new Formatter();
+		formatter14.format("%d in hex is %<x", 255);
+		System.out.println(formatter14);
+		formatter14.close();
+		formatter14 = new Formatter();
+		Calendar calendar = Calendar.getInstance();
+		formatter14.format("Today is day %te of %<tB, %<tY", calendar);
+		System.out.println(formatter14);
+		formatter14.close();
+		System.out.println("******************************************");
 	}
 
 }
