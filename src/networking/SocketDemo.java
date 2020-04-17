@@ -7,7 +7,10 @@ import java.net.Socket;
 public class SocketDemo {
 	/*
 	 * The "ServerSocket" class is for the servers and they act as "listeners" in
-	 * the TCP/IP protocol
+	 * the TCP/IP protocol. It is used to create servers that listen for either
+	 * local or remote client programs to connect to them on published ports. When
+	 * we create a ServerSocket, it will register itself with the system as having
+	 * an interest in client connections.
 	 */
 	/*
 	 * The "Socket" class is for the clients. The creating of a Socket object
