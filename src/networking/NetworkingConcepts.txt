@@ -14,7 +14,7 @@ does not guarantee to deliver the said packets to the destination.
 
 TCP Protocol (Transmission Control Protocol)
 It is a higher-level protocol that manages to robustly string together the data packets, sorting and retransmitting them
-as necessary to reliably transmit data. It reserves the loer 1024 ports for specific protocols. e.g 21 for FTP, 23 for Telnet,
+as necessary to reliably transmit data. It reserves the lower 1024 ports for specific protocols. e.g 21 for FTP, 23 for Telnet,
  25 for e-mail, 43 for whois, 80 for HTTP etc.
 
 UDP Protocol (User Datagram Protocol)
@@ -23,7 +23,7 @@ It sits next to TCP and can be used directly to support fast, connectionless, un
 HTTP Protocol (Hyper Text Transfer Protocol)
 It is the protocol that web browsers and servers use to transfer hypertext pages and images.
 
-HTTP Working
+Working of HTTP 
 When a client requests a file from an HTTP server (the action is called "hit"), it simply sends the name of the file in a special
 format to a pre-defined port and reads back the contents of the file. The server also responds with a status code to tell the
 client whether or not the request can be fulfilled and why.
@@ -40,6 +40,10 @@ It is the name of an Internet address which describes a machine's location in a 
 DNS (Domain Name Service)
 It maps an Internet domain name to an IP address. This enables us to work with domain names, but the Internet operates
 on the IP addresses.
+
+Java supports both TCP/IP and UDP protocol families. It supports TCP/IP by extending the already established stream I/O
+interface and by adding the features required to build I/O objects across the network reliably. UDP supports a simpler and 
+faster point-to-point datagram oriented model.
 
 
 
