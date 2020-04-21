@@ -3,6 +3,7 @@ package javafx;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -36,7 +37,12 @@ public class JavaFXApplicationDemo1 extends Application {
 
 		// Adding a button
 		Button myButton = new Button("Click Here");
+		GridPane.setConstraints(myButton, 2, 2, 2, 2);
 		rootGridPane.getChildren().add(myButton);
+		Label myClickButtonLabel = new Label("Click on the button above");
+		GridPane.setConstraints(myClickButtonLabel, 2, 4, 2, 2);
+		rootGridPane.getChildren().add(myClickButtonLabel);
+		
 
 		// creating a scene and setting the stage
 		primaryStage.setTitle("First JavaFX Application");
