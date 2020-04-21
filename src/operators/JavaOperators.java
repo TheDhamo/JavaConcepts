@@ -1,5 +1,5 @@
 /*Java Operators*/
-package basics;
+package operators;
 
 public class JavaOperators {
 	/*

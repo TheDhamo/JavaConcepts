@@ -1,5 +1,5 @@
 /*Control Statements*/
-package basics;
+package controlStatements;
 
 import java.util.Scanner;
 

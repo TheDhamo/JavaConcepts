@@ -1,5 +1,5 @@
 /*Method Overloading*/
-package basics;
+package methods;
 
 public class MethodOverloading {
 	/*

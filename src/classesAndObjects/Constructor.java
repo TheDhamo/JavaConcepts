@@ -1,5 +1,5 @@
 /*Default Constructor and Parameterized Constructor*/
-package basics;
+package classesAndObjects;
 
 public class Constructor {
 

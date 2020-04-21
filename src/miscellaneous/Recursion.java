@@ -1,5 +1,5 @@
 /*Recursive Method and Recursion*/
-package basics;
+package miscellaneous;
 
 public class Recursion {
 

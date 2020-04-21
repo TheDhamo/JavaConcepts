@@ -1,7 +1,7 @@
 /*Autoboxing and Unboxing*/
-package basics;
+package typeWrappers;
 
-public class AutoboxingAndUnboxing {
+public class AutoBoxingAndAutoUnboxing2 {
 
 	private static int myIntValue = 456;
 	private static Integer myIntValueWrapped1;

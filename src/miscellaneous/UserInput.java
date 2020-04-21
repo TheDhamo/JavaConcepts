@@ -1,5 +1,5 @@
 /*User Input*/
-package basics;
+package miscellaneous;
 
 import java.util.Scanner;
 

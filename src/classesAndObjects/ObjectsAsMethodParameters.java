@@ -1,5 +1,5 @@
 /*Passing objects as method parameters*/
-package basics;
+package classesAndObjects;
 
 public class ObjectsAsMethodParameters {
 

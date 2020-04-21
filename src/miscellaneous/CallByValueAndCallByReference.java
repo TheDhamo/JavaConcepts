@@ -1,5 +1,5 @@
 /*Method Call By Value and Method Call By Reference*/
-package basics;
+package miscellaneous;
 
 public class CallByValueAndCallByReference {
 

@@ -1,5 +1,5 @@
 /*Java Variables and Block*/
-package basics;
+package dataTypes;
 
 public class JavaVariables {
 	/*

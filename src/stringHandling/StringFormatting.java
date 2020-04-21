@@ -1,5 +1,5 @@
 /*String Format*/
-package basics;
+package stringHandling;
 
 import java.util.Formatter;
 

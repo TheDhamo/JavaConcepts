@@ -1,5 +1,5 @@
 /*Data Type Conversion, Type Casting and Automatic Type Promotion in Expressions*/
-package basics;
+package dataTypes;
 
 public class DataTypeConversionCastingPromotion {
 

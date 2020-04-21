@@ -1,5 +1,5 @@
 /*Stack using array*/
-package basics;
+package miscellaneous;
 
 public class StackClass {
 	int[] stck = new int[10];

@@ -1,6 +1,6 @@
 /*Instance vs Static Methods Demo */
 /*Instance vs Static Variables Demo*/
-package basics;
+package classesAndObjects;
 
 public class InstanceVsStatic {
 	private static int staticNum;

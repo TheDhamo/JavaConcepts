@@ -1,5 +1,5 @@
 /* Primitive Data Types or Simple Data Types*/
-package basics;
+package dataTypes;
 
 public class DataTypesAndLiterals {
 

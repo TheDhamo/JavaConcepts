@@ -1,5 +1,5 @@
 /*String Data Type*/
-package basics;
+package stringHandling;
 
 public class StringDataType {
 	/* String is a sequence of single characters/char data type */

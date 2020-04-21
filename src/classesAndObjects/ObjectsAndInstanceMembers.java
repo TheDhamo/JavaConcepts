@@ -1,5 +1,5 @@
 /*Objects and Instance Members (Instance Variables and Instance Methods)*/
-package basics;
+package classesAndObjects;
 
 public class ObjectsAndInstanceMembers {
 	public static void main(String[] args) {

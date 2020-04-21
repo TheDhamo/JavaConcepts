@@ -1,5 +1,5 @@
 /*Java Loops Demo*/
-package basics;
+package loops;
 
 import java.util.Scanner;
 

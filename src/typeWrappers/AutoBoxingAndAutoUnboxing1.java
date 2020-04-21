@@ -5,7 +5,7 @@ Type Wrapper whenever an object of that type is needed. There is no need to expl
  * type wrapper when its value is needed. There is no need to call a method such as intValue() or doubleValue()*/
 package typeWrappers;
 
-public class AutoBoxingAndAutoUnboxing {
+public class AutoBoxingAndAutoUnboxing1 {
 
 	@SuppressWarnings("unused")
 	public static void main(String[] args) {

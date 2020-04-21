@@ -1,5 +1,5 @@
 /*Comparison between Primitive Data Types and Reference Data Types*/
-package basics;
+package dataTypes;
 
 import java.util.Arrays;
 

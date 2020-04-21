@@ -1,5 +1,5 @@
 /*String Parsing*/
-package basics;
+package stringHandling;
 
 import java.util.StringTokenizer;
 import java.util.regex.Pattern;
