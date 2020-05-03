@@ -5,10 +5,10 @@ public class DataTypesAndLiterals {
 
 	public static void main(String[] args) {
 		/*
-		 * The primitive data types in java can be classified into Integers
-		 * (byte, short, int, long) Floating-Point Numbers (float, double),
-		 * Characters (char) and Boolean (boolean). Though Java is
-		 * object-oriented, primitive data types are not object-oriented
+		 * The primitive data types in java can be classified into Integers (byte,
+		 * short, int, long) Floating-Point Numbers (float, double), Characters (char)
+		 * and Boolean (boolean). Though Java is object-oriented, primitive data types
+		 * are not object-oriented
 		 */
 
 		// *** Integers - whole valued signed numbers (positive & negative)***//
@@ -16,6 +16,15 @@ public class DataTypesAndLiterals {
 		// byte (takes 8-bits and value ranges from -128 to 127)
 		// useful when working with a stream of data from a network or file/ raw
 		// binary data
+
+		/*
+		 * Suffix -> long, float and double data types have suffixes L or l, F or f and
+		 * D or d respectively (preferably the uppercases are used). If no suffices are
+		 * used with these data types, then they are considered to be of "int" data type
+		 * for integral type and "double" for non-integral type. The data types "byte",
+		 * "short" and "char" do not have any specific suffices.
+		 */
+
 		byte myByteValue = 127;
 		System.out.println("byte: " + myByteValue);
 		System.out.println("*********************************************");
@@ -26,8 +35,7 @@ public class DataTypesAndLiterals {
 		System.out.println("*********************************************");
 
 		/*
-		 * int (takes 32-bits and value ranges from -2,147,483,648 to 2,147,483,
-		 * 647)
+		 * int (takes 32-bits and value ranges from -2,147,483,648 to 2,147,483, 647)
 		 */
 		// The data types "byte", "short" and "char" are promoted to "int" in an
 		// expression and arithmetic operations can be performed on that
@@ -42,8 +50,8 @@ public class DataTypesAndLiterals {
 		System.out.println("*********************************************");
 
 		/*
-		 * long (takes 64-bits and value ranges from -9,223,372,036,854,775,808
-		 * to 9,223,372,036,854,775,807)
+		 * long (takes 64-bits and value ranges from -9,223,372,036,854,775,808 to
+		 * 9,223,372,036,854,775,807)
 		 */
 		// need to append "L" at the end of the literal to specify as long
 		long myLongValue = 332238487574374L;
@@ -56,25 +64,24 @@ public class DataTypesAndLiterals {
 		// Java implements the standarad IEEE-754 set of floating point types
 		// and operators
 		/*
-		 * float (specifies a single-precision value, takes 32-bits, need to
-		 * append "f" at the end to specify as float, 6 to 7 significant decimal
-		 * digits, typically used when we need a fractional component but don't
-		 * require a larger degree of precision)
+		 * float (specifies a single-precision value, takes 32-bits, need to append "f"
+		 * at the end to specify as float, 6 to 7 significant decimal digits, typically
+		 * used when we need a fractional component but don't require a larger degree of
+		 * precision)
 		 */
 		float myFloatValue1 = 24.346436F;
 		System.out.println("float: " + myFloatValue1);
 		System.out.println("*********************************************");
 
 		/*
-		 * double (specifies a double-precision value, takes 64-bits, putting
-		 * "d" at the end is optional, 15 significant decimal digits, faster
-		 * than single precision)
+		 * double (specifies a double-precision value, takes 64-bits, putting "d" at the
+		 * end is optional, 15 significant decimal digits, faster than single precision)
 		 */
-		double myDoubleValue1 = 422.5552643337774;
+		double myDoubleValue1 = 422.5552643337774D;
 		// double literal using underscores
-		double myDoubleValue2 = 422.55_52_6433_37774;
-		double myDoubleValue3 = 422.555__2643337__774;
-		double myDoubleValue4 = 42__2.55526_4333_7774;
+		double myDoubleValue2 = 422.55_52_6433_37774D;
+		double myDoubleValue3 = 422.555__2643337__774D;
+		double myDoubleValue4 = 42__2.55526_4333_7774D;
 		System.out.println("double: " + myDoubleValue1);
 		System.out.println("double: " + myDoubleValue2);
 		System.out.println("double: " + myDoubleValue3);
@@ -118,8 +125,8 @@ public class DataTypesAndLiterals {
 		System.out.println("*********************************************");
 
 		// Difference between float and double primitive data types
-		float diffFloatValue = 5f / 3f;
-		double diffDoubleValue = 5d / 3d; // 'd' is optional
+		float diffFloatValue = 5F / 3F;
+		double diffDoubleValue = 5D / 3D;
 		System.out.println("The variable of type float gives: " + diffFloatValue);
 		System.out.println("The variable of type double gives: " + diffDoubleValue);
 		System.out.println("*********************************************");
