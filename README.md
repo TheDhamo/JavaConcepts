@@ -7,7 +7,7 @@ This is a repository where you will get the code and many important information 
 All you need to do is to run the below command to build the project using Maven
 
 ```
-maven clean compile
+mvn clean compile
 ```
 
 ### Prerequisites
