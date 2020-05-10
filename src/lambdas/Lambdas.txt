@@ -1,0 +1,17 @@
+Lambda Expressions (also referred to as Closures):
+
+1) Introduced with JDK8
+2) Acted as a catalyst in the introduction of two new Java features - i) Default Method and ii) Method Reference
+3) A lambda expression is an anonymous, unnamed method which does not get executed on its own. It is used to implement
+     a method defined by a functional interface. Some common Functional Interfaces in Java are Comparator,
+	 Runnable,Comparable,ActionListener etc.
+4) A functional interface (also known as SAM = Single Abstract Method) is an interface that contains one and only one abstract
+    method which specifies the intended purpose of the interface. e..g "Runnable" functional interface only has the "run" method
+    that represents a single action. It also defines the target type of a lambda expression.
+5) A lambda expression can be used only in a context in which its target type is specified.
+6) A lambda expression consists of 2 parts - i) left part specifies any parameters required (if no parameter are needed, an empty
+    parameter list is used), ii) right side specifies the lambda body which has the actions of the lambda expression.
+7) The "->" operator can be verbalized as "becomes" or "goes to"
+8) Two types of lambda bodies are there - i) consisting of a single expression ii) consisting of a block of code.
+
+
