@@ -25,6 +25,7 @@ public class LambdaContexts {
 		// myNum = ()-> "123.45";
 		System.out.println("**********************************************");
 		NumericTest1 isEven;
+		// below is an "Expression Lambda" having "Expression Body"
 		isEven = (n) -> (n % 2) == 0;
 		System.out.println("Is 10 even?: " + isEven.test(10));
 		System.out.println("Is 9 even?: " + isEven.test(9));
