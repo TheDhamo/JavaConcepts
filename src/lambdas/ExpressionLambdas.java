@@ -3,8 +3,8 @@
     target type is defined. The contexts are: it is assigned to a functional interface reference, during variable initialization, 
     return statements and method arguments.*/
 package lambdas;
-
-public class LambdaContexts {
+/*Expression Lambdas*/
+public class ExpressionLambdas {
 
 	public static void main(String[] args) {
 
@@ -25,7 +25,8 @@ public class LambdaContexts {
 		// myNum = ()-> "123.45";
 		System.out.println("**********************************************");
 		NumericTest1 isEven;
-		// below is an "Expression Lambda" having "Expression Body"
+		// below is an "Expression Lambda" having "Expression Body" since it consists of
+		// a single expression
 		isEven = (n) -> (n % 2) == 0;
 		System.out.println("Is 10 even?: " + isEven.test(10));
 		System.out.println("Is 9 even?: " + isEven.test(9));
