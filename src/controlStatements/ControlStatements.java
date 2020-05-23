@@ -21,9 +21,9 @@ public class ControlStatements {
 	// If, else-if and nested if
 	private static void ifElseIf() {
 		/*
-		 * if statement - checks for condition. If condition returns boolean
-		 * true it executes the code within. For single statement within the if
-		 * condition, curly braces is not required.
+		 * if statement - checks for condition. If condition returns boolean true it
+		 * executes the code within. For single statement within the if condition, curly
+		 * braces is not required.
 		 */
 		String morningAffirmation = "Today is my day and it will be good";
 		boolean wokeUpEarly = true;
@@ -67,9 +67,9 @@ public class ControlStatements {
 	// switch
 	private static void switchStatement() {
 		/*
-		 * switch-case statement - works with some primitive data types (byte,
-		 * short, int, char), enumerations/enums, String data type and Wrapper
-		 * classes like Integer, Byte, Short, Character
+		 * switch-case statement - works with some primitive data types (byte, short,
+		 * int, char), enumerations/enums, String data type and Wrapper classes like
+		 * Integer, Byte, Short, Character
 		 */
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter the month name:");
