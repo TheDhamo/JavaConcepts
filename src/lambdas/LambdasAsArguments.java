@@ -8,12 +8,33 @@ public class LambdasAsArguments {
 		System.out.println("Here is input string: " + inStr);
 
 		// this passes an expression lambda that uppercases a String
-		outStr = stringOp((str) -> str.toUpperCase(), inStr);
+		outStr = stringOp((String str) -> str.toUpperCase(), inStr);
 		System.out.println("The string in uppercase: " + outStr);
 		System.out.println("****************************************************");
 
 		// this passes a block lambda that removes spaces
-		
+		outStr = stringOp((String str) -> {
+			String result = "";
+			for (int i = 0; i < str.length(); i++) {
+				if (str.charAt(i) != ' ') {
+					result += str.charAt(i);
+				}
+			}
+			return result;
+		}, inStr);
+		System.out.println("The string with spaces removed: " + outStr);
+		System.out.println("****************************************************");
+
+		// this reverses a String
+		StringFunc2 reverse = (String str) -> {
+			String result = "";
+			for (int i = str.length() - 1; i >= 0; i--) {
+				result += str.charAt(i);
+			}
+			return result;
+		};
+		System.out.println("The string reversed: " + stringOp(reverse, inStr));
+		System.out.println("****************************************************");
 
 	}
 
