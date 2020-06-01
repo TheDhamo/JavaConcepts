@@ -1,6 +1,6 @@
 package lambdas;
 
-public class StaticMethodReference {
+public class StaticMethodReference1 {
 	/*
 	 * A method reference provides a way to refer to a method without executing it.
 	 * This method reference can be used anywhere in which it is compatible with its
